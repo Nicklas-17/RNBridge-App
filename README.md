@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+# React Native iOS Native Module Bridge Demo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
+This project demonstrates the implementation of a custom native iOS module in React Native. It showcases the ability to create a native Swift view and bridge it to React Native, allowing for seamless integration between native iOS and React Native components.
 
-## Get started
+## Features
+- Custom native iOS view written in Swift
+- Bridge implementation between Swift and React Native
+- Property passing from React Native to native code
+- Modern React Native architecture support
 
-1. Install dependencies
+## Technical Implementation
 
-   ```bash
-   npm install
-   ```
+### Native Components
+- `CustomView.swift`: Native iOS view implementation with a configurable UI
+- `CustomViewManager.swift`: Bridge manager handling communication between React Native and Swift
+- `CustomViewManager.m`: Objective-C bridge interface
 
-2. Start the app
+### React Native Components
+- `CustomView.tsx`: React Native component wrapping the native view
+- `App.tsx`: Main application demonstrating the component usage
 
-   ```bash
-    npx expo start
-   ```
+## Setup and Running
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Clone the repository
 ```bash
-npm run reset-project
+git clone [your-repo-url]
+cd [repo-name]
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies
+```bash
+npm install
+```
 
-## Learn more
+3. Install iOS dependencies
+```bash
+cd ios
+pod install
+cd ..
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Run the project
+```bash
+npx expo run:ios
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+**Note:** This project requires a development build and cannot run in Expo Go due to native code requirements.
 
-## Join the community
+## Important Notes
+- The project uses a development build instead of Expo Go due to native module requirements
+- Built using React Native's modern architecture (Bridgeless mode)
+- Demonstrates integration between Swift, Objective-C (bridge), and React Native
 
-Join our community of developers creating universal apps.
+## Development Environment
+- React Native
+- Expo
+- iOS/Swift
+- Objective-C (for bridging)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Screenshots
+[Add screenshots of your component here]![Simulator Screenshot - iPhone 14 Pro Max - 2024-12-02 at 22 58 55](https://github.com/user-attachments/assets/50e6d5e2-f0b5-453b-b72d-06a495318aa3)
