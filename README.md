@@ -20,31 +20,6 @@ This project demonstrates the implementation of a custom native iOS module in Re
 - `CustomView.tsx`: React Native component wrapping the native view
 - `App.tsx`: Main application demonstrating the component usage
 
-## Setup and Running
-
-1. Clone the repository
-```bash
-git clone [your-repo-url]
-cd [repo-name]
-```
-
-2. Install dependencies
-```bash
-npm install
-```
-
-3. Install iOS dependencies
-```bash
-cd ios
-pod install
-cd ..
-```
-
-4. Run the project
-```bash
-npx expo run:ios
-```
-
 **Note:** This project requires a development build and cannot run in Expo Go due to native code requirements.
 
 ## Important Notes
